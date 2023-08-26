@@ -11,10 +11,31 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class CuartoPage implements OnInit {
+  numero:string ="";
+  pares:number[]=[];
+  impares:number[]=[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  calcularPares():any{
+    for(let i=0; i<=parseInt(this.numero); i++){
+      if(i % 2 == 0){
+        this.pares.push(i);
+      }
+    }
+    return this.pares;
+  }
+
+  calcularImpares():any{
+    for(let i=0; i<=parseInt(this.numero); i++){
+      if(i % 2 == 1){
+        this.impares.push(i);
+      }
+    }
+    return this.impares;
   }
 
 }

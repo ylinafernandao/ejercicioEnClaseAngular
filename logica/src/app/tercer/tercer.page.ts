@@ -11,10 +11,32 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class TercerPage implements OnInit {
+  resultado:string = "";
+  numero:string = "";
+  primo: boolean = true;
+  n:number = 2;
+  primos: number[] = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  calcularPrimos():any{
+    for(let i = 2; i < parseInt(this.numero); i++){
+
+      while(this.primo == true && this.n < parseInt(this.numero)){
+        if(i % this.n == 0){
+          this.primo = false;
+        } else {
+          this.n ++;
+        }
+      }
+
+      if(this.primo == true){
+        this.primos.push(i);
+      }
+    }
+    return this.primos;
+  }
 }

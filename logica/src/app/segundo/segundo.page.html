@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>segundo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Segundo Punto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +13,18 @@
       <ion-title size="large">segundo</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label>Factorial:</ion-label>
+        <ion-input [(ngModel)]="numero"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="calcularFactorial()">Calcular</ion-button>
+
+      <ion-item>{{n1}}</ion-item>
+
+    </ion-list>
+  </div>
 </ion-content>

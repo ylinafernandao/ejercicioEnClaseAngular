@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>primer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Primer Punto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,12 +13,18 @@
       <ion-title size="large">primer</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <div id="container">
     <ion-list>
       <ion-item>
-        <ion-input label="Fibonacci" type="number" placeholder="Ingrese un numero"></ion-input>
-        <ion-button (click)="calcularFibonacci()">Calcular</ion-button>
+        <ion-label>Fibonacci:</ion-label>
+        <ion-input [(ngModel)]="numero"></ion-input>
       </ion-item>
+
+      <ion-button (click)="calcularFibonacci()">Calcular</ion-button>
+
+      <ion-item>{{resultado}}</ion-item>
+
     </ion-list>
   </div>
 </ion-content>

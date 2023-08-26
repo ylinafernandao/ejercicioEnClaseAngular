@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tercer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tercer Punto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +13,17 @@
       <ion-title size="large">tercer</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label>Números Primos:</ion-label>
+        <ion-input [(ngModel)]="numero"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="calcularPrimos()">Calcular</ion-button>
+
+      <ion-item>{{resultado}}</ion-item>
+
+    </ion-list>
+  </div>
 </ion-content>
