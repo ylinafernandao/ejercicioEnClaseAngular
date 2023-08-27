@@ -21,9 +21,9 @@
         <ion-input [(ngModel)]="numero"></ion-input>
       </ion-item>
 
-      <ion-button (click)="calcularFibonacci()">Calcular</ion-button>
+      <ion-button (click)="calcularFibonacci()">Calcular serie de Fibonacci</ion-button>
 
-      <ion-item>{{resultado}}</ion-item>
+      <ion-item *ngFor="let item of numeros">{{item}}</ion-item>
 
     </ion-list>
   </div>

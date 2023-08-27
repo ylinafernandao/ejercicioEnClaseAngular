@@ -20,11 +20,11 @@
         <ion-input [(ngModel)]="numero"></ion-input>
       </ion-item>
 
-      <ion-button (click)="calcularPares()"></ion-button>
+      <ion-button (click)="calcularPares()">Pares</ion-button>
       <ion-button (click)="calcularImpares()">Impares</ion-button>
 
-      <ion-item>{{pares}}</ion-item>
-      <ion-item>{{impares}}</ion-item>
+      <ion-item *ngFor="let item of pares">{{item}}</ion-item>
+      <ion-item *ngFor="let item of impares">{{item}}</ion-item>
 
     </ion-list>
   </div>

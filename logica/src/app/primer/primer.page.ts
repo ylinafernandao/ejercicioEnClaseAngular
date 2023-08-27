@@ -26,7 +26,7 @@ export class PrimerPage implements OnInit {
   }
 
   calcularFibonacci():any{
-    for(let i = 0 ; i < parseInt(this.numero); i++){
+    for(let i = 0 ; i <= parseInt(this.numero); i++){
       this.numeros.push(this.n1);
       this.siguiente = this.n1 + this.n2;
       this.n1 = this.n2;
@@ -35,7 +35,7 @@ export class PrimerPage implements OnInit {
     }
     
       // this.resultado.push((this.numeros[i]).toString());
-  
+    return this.numeros;
   }
 
 }

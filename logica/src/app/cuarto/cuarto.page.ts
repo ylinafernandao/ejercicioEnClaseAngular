@@ -21,8 +21,8 @@ export class CuartoPage implements OnInit {
   }
 
   calcularPares():any{
-    for(let i=0; i<=parseInt(this.numero); i++){
-      if(i % 2 == 0){
+    for(let i = 0; i<=parseInt(this.numero); i++){
+      if(i % 2 === 0){
         this.pares.push(i);
       }
     }
@@ -30,8 +30,8 @@ export class CuartoPage implements OnInit {
   }
 
   calcularImpares():any{
-    for(let i=0; i<=parseInt(this.numero); i++){
-      if(i % 2 == 1){
+    for(let i = 0; i<=parseInt(this.numero); i++){
+      if(i % 2 === 1){
         this.impares.push(i);
       }
     }
